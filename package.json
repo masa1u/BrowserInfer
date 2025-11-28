@@ -1,0 +1,19 @@
+{
+  "name": "browser-infer",
+  "version": "1.0.0",
+  "description": "WebGPU + ONNX Runtime Web でブラウザ内 LLM チャットデモ（Phi-3-mini）",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["webgpu", "onnx", "llm", "phi3", "browser-inference"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

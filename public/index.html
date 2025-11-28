@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrowserInfer - WebGPU LLM Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BrowserInfer</h1>
+            <p class="subtitle">WebGPU + Phi-3 ブラウザ内推論チャット</p>
+        </header>
+
+        <main>
+            <div id="status-panel" class="status-panel">
+                <div id="webgpu-status" class="status-item">
+                    <span class="status-label">WebGPU:</span>
+                    <span id="webgpu-indicator" class="status-indicator">チェック中...</span>
+                </div>
+                <div id="model-status" class="status-item">
+                    <span class="status-label">モデル:</span>
+                    <span id="model-indicator" class="status-indicator">未ロード</span>
+                </div>
+            </div>
+
+            <div id="error-message" class="error-message hidden"></div>
+
+            <div id="chat-container" class="chat-container">
+                <div id="chat-messages" class="chat-messages"></div>
+            </div>
+
+            <div id="input-panel" class="input-panel">
+                <textarea 
+                    id="user-input" 
+                    placeholder="メッセージを入力してください..."
+                    rows="3"
+                    disabled
+                ></textarea>
+                <div class="button-group">
+                    <button id="clear-cache-button" class="secondary-button">キャッシュクリア</button>
+                    <button id="send-button" disabled>送信</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
